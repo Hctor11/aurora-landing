@@ -37,16 +37,16 @@ const Navigation = () => {
       tl.current = gsap
         .timeline({ paused: true })
         .to(".overlay", {
-          duration: 1,
+          duration: 0.6,
           clipPath: "polygon(0%  0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power4.inOut",
         })
         .to(".menu-link-holder", {
           y: 0,
-          duration: 0.5,
+          duration: 0.6,
           stagger: 0.1,
           ease: "power4.inOut",
-          delay: -0.75,
+          delay: 0.2,
         });
     },
     { scope: containerRef }
@@ -85,30 +85,31 @@ const Navigation = () => {
       ref={containerRef}
     >
       <h1 className="dark:text-white">AURORA</h1>
-      <div
-        className="cursor-pointer transition-all hover:font-bold"
-        onClick={toggleDarkMode}
-      >
-        <p className="dark:text-white">{ isDarkMode ? "light" : "dark"}</p>
+      <div className=" cursor-pointer transition-all " onClick={toggleDarkMode}>
+        <p className="dark:text-white hover:font-bold">
+          {isDarkMode ? "light" : "dark"}
+        </p>
       </div>
 
       <div className="menu" onClick={() => handleMenuOpen()}>
-        <p className="cursor-pointer transition-all hover:font-bold dark:text-white">MENU</p>
+        <p className="cursor-pointer transition-all hover:font-bold dark:text-white">
+          MENU
+        </p>
       </div>
 
-      <div className="overlay flex-col-reverse md:flex-row-reverse items-center justify-evenly">
+      <div className="overlay transition-none dark:text-[#22333B] dark:bg-white flex-col-reverse md:flex-row-reverse items-center justify-evenly">
         <div
           className="menu-close cursor-pointer"
           onClick={() => handleMenuOpen()}
         >
           <p className="transition-all hover:font-bold">CLOSE</p>
         </div>
-        <div className="menu-links overflow-hidden flex flex-col gap-5">
+        <div className="menu-links  overflow-hidden flex flex-col gap-5">
           {MENU.map((item, index) => (
             <div className="overflow-hidden" key={index}>
               <div className="menu-link-holder">
                 <Link
-                  className="cursor-pointer relative overflow-hidden text-2xl transition-all hover:translate-x-2 hover:bg-teal-900"
+                  className="cursor-pointer relative overflow-hidden text-2xl hover:translate-x-2 hover:bg-teal-900"
                   href="#"
                 >
                   {item.label}

@@ -16,6 +16,9 @@
   padding: 0
   box-sizing: border-box
   -webkit-font-smoothing: antialiased
+  transition-property: all
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms
 
 p
   text-decoration: none
@@ -31,7 +34,7 @@ navigation
 .overlay
   color: white
   position: fixed
-  top:0
+  top: 0
   left: 0
   width: 100vw
   height: 100vh
@@ -39,5 +42,4 @@ navigation
   background: #22333B
   z-index: 2
   display: flex
-  clip-path: polygon(0%  0%, 100% 0%, 100% 0%, 0% 0%)
-
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)
