@@ -21,7 +21,7 @@ const Main = () => {
 
   return (
     <div
-      className="flex flex-col items-center pt-28 rounded-md w-full h-[70vh] bg-cover transition-all duration-500"
+      className="flex mb-12 flex-col items-center pt-28 rounded-md w-full h-[70vh] bg-cover transition-all duration-500"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <h1 className="text-5xl mb-12 text-center font-semibold">
