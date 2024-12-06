@@ -1,32 +1,21 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const MENU: { label: string }[] = [
-  {
-    label: "Inicio",
-  },
-  {
-    label: "Servicios",
-  },
-  {
-    label: "Proyectos",
-  },
-  {
-    label: "Contacto",
-  },
-  {
-    label: "Solicitar Cotización",
-  },
+const MENU = [
+  { label: "Inicio", id: "landing" },
+  { label: "Servicios", id: "services" },
+  { label: "Proyectos", id: "projects" },
+  { label: "Contacto", id: "contact" },
+  { label: "Solicitar Cotización", id: "cotizacion" },
 ];
 
 const Navigation = () => {
-  const containerRef = useRef();
-  const tl = useRef();
+  const containerRef = useRef(null);
+  const tl = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -60,13 +49,21 @@ const Navigation = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  const handleLinkClick = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     if (isMenuOpen) {
       tl.current.play();
     } else {
       tl.current.reverse();
     }
-  });
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -104,16 +101,16 @@ const Navigation = () => {
         >
           <p className="transition-all hover:font-bold">CLOSE</p>
         </div>
-        <div className="menu-links  overflow-hidden flex flex-col gap-5">
-          {MENU.map((item, index) => (
-            <div className="overflow-hidden" key={index}>
+        <div className="menu-links overflow-hidden flex flex-col gap-5">
+          {MENU.map((item) => (
+            <div className="overflow-hidden" key={item.id}>
               <div className="menu-link-holder">
-                <Link
+                <a
                   className="cursor-pointer relative overflow-hidden text-2xl hover:translate-x-2 hover:bg-teal-900"
-                  href="#"
+                  onClick={() => handleLinkClick(item.id)}
                 >
                   {item.label}
-                </Link>
+                </a>
               </div>
             </div>
           ))}

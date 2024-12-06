@@ -21,6 +21,7 @@ const Main = () => {
 
   return (
     <div
+    id="landing"
       className="flex mb-12 flex-col items-center pt-28 rounded-md w-full h-[70vh] bg-cover transition-all duration-500"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
