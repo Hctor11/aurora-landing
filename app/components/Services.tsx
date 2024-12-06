@@ -1,44 +1,44 @@
 const servicesData = [
   {
-    icon: "/icons/icon1.svg",
-    title: "Servicio 1",
+    title: "Consultoría Estratégica",
     description:
-      "Descripción breve del servicio 1 para dar más detalles al cliente.",
+      "Te ayudamos a desarrollar estrategias personalizadas para optimizar tus procesos y alcanzar tus objetivos empresariales.",
     bgColor: "bg-blue-500",
   },
   {
-    icon: "/icons/icon2.svg",
-    title: "Servicio 2",
+    title: "Diseño Web",
     description:
-      "Descripción breve del servicio 2 para explicar sus beneficios.",
+      "Creamos sitios web modernos y funcionales que se adaptan a las necesidades de tu negocio, optimizados para cualquier dispositivo.",
     bgColor: "bg-green-500",
   },
   {
-    icon: "/icons/icon3.svg",
-    title: "Servicio 3",
-    description: "Descripción breve del servicio 3 con detalles útiles.",
+    title: "Marketing Digital",
+    description:
+      "Potencia tu presencia en línea con campañas efectivas en redes sociales, SEO y publicidad programática.",
     bgColor: "bg-red-500",
   },
   {
-    icon: "/icons/icon4.svg",
-    title: "Servicio 4",
+    title: "Análisis de Datos",
     description:
-      "Descripción adicional de un servicio extra para los clientes.",
+      "Transformamos tus datos en decisiones estratégicas mediante reportes y visualizaciones detalladas.",
     bgColor: "bg-yellow-500",
   },
 ];
 
 const Services = () => {
   return (
-    <div id="services" className="w-screen h-screen bg-fit bg-[url('/images/bg4.jpg')] flex ">
+    <div
+      id="services"
+      className="w-screen h-screen bg-fit bg-[url('/images/bg4.jpg')] flex "
+    >
       <div className="md:max-w-7xl md:w-full md:m-auto flex flex-col md:flex-row  md:justify-between">
         <div className="ml-10 mb-10 max-w-48">
           <h1 className="text-7xl text-white font-bold mb-4 text-center">
             Servicios
           </h1>
           <span className="text-white text-left block">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vitae
-            in voluptas quae fugit facilis saepe aspernatur eum, ea ipsum.
+            Ofrecemos soluciones integrales diseñadas para satisfacer las
+            necesidades de tu negocio en un mundo digital competitivo.
           </span>
         </div>
 
