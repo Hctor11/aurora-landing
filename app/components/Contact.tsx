@@ -1,10 +1,15 @@
+
 const Contact = () => {
   return (
-    <section id="contact" className="w-full py-16 bg-white text-[#22333B] dark:bg-[#22333B] dark:text-white transition duration-300">
+    <section
+      id="contact"
+      className="w-full py-16 bg-white text-[#22333B] dark:bg-[#22333B] dark:text-white transition duration-300"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-6">Contáctanos</h2>
         <p className="text-center text-lg mb-12">
-          Estamos aquí para ayudarte a construir el hogar de tus sueños.<br/>
+          Estamos aquí para ayudarte a construir el hogar de tus sueños.
+          <br />
           ¡Contáctanos para más información o una cotización!
         </p>
 
