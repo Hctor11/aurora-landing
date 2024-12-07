@@ -84,6 +84,3 @@ El proyecto está dividido en varias secciones clave:
 
 Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
----
-
-¡Gracias por usar **Aurora**!
