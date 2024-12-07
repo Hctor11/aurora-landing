@@ -28,13 +28,13 @@ Antes de comenzar, asegúrate de tener instalado en tu sistema:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/aurora.git
+   git clone https://github.com/Hctor11/aurora-landing.git
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd aurora
+   cd aurora-landing
    ```
 
 3. Instala las dependencias del proyecto:
@@ -79,15 +79,6 @@ El proyecto está dividido en varias secciones clave:
 - **Proyectos**: Galería de proyectos anteriores, mostrando ejemplos visuales de los trabajos realizados.
 - **Contacto**: Formulario de contacto para que los usuarios puedan solicitar más información o cotizaciones.
 
-## Contribución
-
-Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b nueva-funcionalidad`).
-3. Realiza los cambios y confirma (`git commit -am 'Agrega nueva funcionalidad'`).
-4. Empuja los cambios a tu rama (`git push origin nueva-funcionalidad`).
-5. Crea un pull request.
 
 ## Licencia
 
