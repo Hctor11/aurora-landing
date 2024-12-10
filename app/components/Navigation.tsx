@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -15,7 +14,7 @@ const MENU = [
 
 const Navigation = () => {
   const containerRef = useRef(null);
-  const tl = useRef(null);
+  const tl = useRef<gsap.core.Timeline | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
