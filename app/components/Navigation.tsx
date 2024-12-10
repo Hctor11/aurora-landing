@@ -57,10 +57,12 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    if (isMenuOpen) {
-      tl.current.play();
-    } else {
-      tl.current.reverse();
+    if (tl.current) {
+      if (isMenuOpen) {
+        tl.current.play();
+      } else {
+        tl.current.reverse();
+      }
     }
   }, [isMenuOpen]);
 
